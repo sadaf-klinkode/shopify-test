@@ -148,9 +148,9 @@ The app should now be accessible at:
 1. **404 Error on React Routes**:
    - Ensure Laravel's `routes/web.php` serves the React app:
      ```php
-     Route::get('/{any}', function () {
-         return view('react');
-     })->where('any', '.*');
+     Route::get('/', function () {
+                return view('app');
+            })->middleware('verify.shopify')->name('home');
      ```
 
 2. **CORS Errors**:
