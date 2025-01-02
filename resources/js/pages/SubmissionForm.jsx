@@ -35,8 +35,9 @@ const SubmissionForm = () => {
 
     return (
         <Page title="Add Submission">
+            
             <Card sectioned>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} data-save-bar>
                     <FormLayout>
                         <TextField
                             label="Name"

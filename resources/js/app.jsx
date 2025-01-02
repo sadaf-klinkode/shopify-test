@@ -1,16 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SubmissionList from './pages/SubmissionList';
-import SubmissionForm from './pages/SubmissionForm';
+import { RouterProvider } from 'react-router-dom';
+import router from './Routes';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<SubmissionList />} />
-        <Route path="/form" element={<SubmissionForm />} />
-      </Routes>
-    </Router>
+    <RouterProvider router={router} />
   );
 };
 
